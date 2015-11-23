@@ -11,6 +11,17 @@ page.open("http://lattes.cnpq.br/0496255936346354") // loads a page
       var e = document.createEvent('MouseEvents');
       e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
       a.dispatchEvent(e);
+
+      //TRATAMENTO DO AUDIO DEVE OCORRER NESSE MOMENTO... POIS APÓS SUBMETER NOVAMENTE É GERADO NOVO CAPTCHA
+
+      var input=document.getElementById("informado");
+      input.value="xxxx";    
+      var b=document.getElementById("btn_validar_captcha");
+      e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+      b.dispatchEvent(e);
+
+
+
     });
 });
 
